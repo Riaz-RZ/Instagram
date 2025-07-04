@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingHorizontal="40dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/titleImage"
+        android:layout_width="180dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/instagram"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/logininputNameET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F6F5F5"
+        android:hint="Phone Number, User Name or Email"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="8dp"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/titleImage"
+        app:layout_constraintStart_toStartOf="@id/titleImage"
+        app:layout_constraintTop_toBottomOf="@id/titleImage" />
+
+    <EditText
+        android:id="@+id/logininputPasswordET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:background="#F6F5F5"
+        android:hint="Password"
+        android:imeOptions="actionNext"
+        android:inputType="numberPassword"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="8dp"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/logininputNameET"
+        app:layout_constraintStart_toStartOf="@id/logininputNameET"
+        app:layout_constraintTop_toBottomOf="@id/logininputNameET" />
+
+    <Button
+        android:id="@+id/loginBTN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:backgroundTint="#2196F3"
+        android:text="Log in"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/logininputPasswordET"
+        app:layout_constraintStart_toStartOf="@id/logininputPasswordET"
+        app:layout_constraintTop_toBottomOf="@id/logininputPasswordET" />
+
+    <View
+        android:id="@+id/ViewOne"
+        android:layout_width="130dp"
+        android:layout_height="1dp"
+        android:layout_marginVertical="20dp"
+        android:background="#E2D1D1"
+        app:layout_constraintStart_toStartOf="@id/loginBTN"
+        app:layout_constraintTop_toBottomOf="@id/loginBTN" />
+
+    <TextView
+        android:id="@+id/orTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:text="OR"
+        app:layout_constraintStart_toEndOf="@id/ViewOne"
+        app:layout_constraintTop_toBottomOf="@id/loginBTN" />
+
+    <View
+        android:id="@+id/ViewTwo"
+        android:layout_width="130dp"
+        android:layout_height="1dp"
+        android:background="#E2D1D1"
+        app:layout_constraintEnd_toEndOf="@id/loginBTN"
+        app:layout_constraintTop_toTopOf="@id/ViewOne" />
+
+    <TextView
+        android:id="@+id/facebookTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="30dp"
+        android:text="Log in with Facebook"
+        android:textAlignment="center"
+        android:textColor="#1586DC"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ViewTwo" />
+
+    <TextView
+        android:id="@+id/forgetPasswortTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="30dp"
+        android:text="Forget Password?"
+        android:textAlignment="center"
+        android:textColor="#474646"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/facebookTV" />
+
+    <LinearLayout
+        android:id="@+id/layoutOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="30dp"
+        android:weightSum="3"
+        app:layout_constraintEnd_toEndOf="@id/forgetPasswortTV"
+        app:layout_constraintStart_toStartOf="@id/forgetPasswortTV"
+        app:layout_constraintTop_toBottomOf="@id/forgetPasswortTV">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:text="Don't have an Account?"
+            android:textAlignment="textEnd" />
+
+        <TextView
+            android:id="@+id/signupTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Sign up"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="@id/layoutOne"
+        app:layout_constraintStart_toStartOf="@id/layoutOne"
+        app:layout_constraintTop_toBottomOf="@id/layoutOne">
+
+        <ImageView
+            android:id="@+id/googleplaystoreImage"
+            android:layout_width="140dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:src="@drawable/googleplay" />
+
+        <ImageView
+            android:id="@+id/appstoreImage"
+            android:layout_width="140dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:src="@drawable/appstore" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
